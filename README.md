@@ -51,7 +51,9 @@ Open http://localhost:8000/. Use a local server rather than opening the HTML fil
 
 Product copy and specifications are maintained in each language page and in assets/js/translations.js. Only publish confirmed product information.
 
-The current artwork in assets/images/mesh-bag.svg is an intentional placeholder. Place final optimized product images in assets/images/, update the corresponding image elements in all language pages, and retain explicit dimensions and useful translated alternative text.
+Original product photography is stored as optimized WebP files in assets/images/. Responsive variants use a numeric width suffix, such as hero-onion-bags-800.webp and application-onions-480.webp.
+
+When replacing photography, preserve the established aspect ratios, responsive sources, explicit dimensions and translated alternative text. Rebuild og-gspbags.webp at exactly 1200 × 630 pixels when the social preview changes.
 
 ## Deployment
 

@@ -112,6 +112,10 @@ a {
     margin-bottom: 2.5rem;
 }
 
+.section-heading .lead {
+    margin-top: 1rem;
+}
+
 .section-heading--center {
     margin-inline: auto;
     text-align: center;
@@ -338,27 +342,12 @@ p {
 }
 
 .hero {
-    position: relative;
     overflow: hidden;
-    padding-block: clamp(4.5rem, 9vw, 7.5rem);
-    background: linear-gradient(135deg, #f7fbf8 0%, #edf7f1 100%);
-}
-
-.hero::after {
-    position: absolute;
-    right: -8rem;
-    bottom: -15rem;
-    width: 35rem;
-    height: 35rem;
-    border: 1px solid rgba(22, 115, 71, 0.12);
-    border-radius: 50%;
-    box-shadow: 0 0 0 5rem rgba(22, 115, 71, 0.035), 0 0 0 10rem rgba(22, 115, 71, 0.025);
-    content: "";
+    padding-block: clamp(4rem, 8vw, 6.75rem);
+    background: #f3f8f5;
 }
 
 .hero-grid {
-    position: relative;
-    z-index: 1;
     display: grid;
     align-items: center;
     gap: clamp(3rem, 7vw, 6rem);
@@ -406,29 +395,25 @@ p {
 
 .product-visual {
     position: relative;
-    display: grid;
-    min-height: 32rem;
-    place-items: center;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
-    background: linear-gradient(145deg, #fff 0%, #eef5f1 100%);
+    background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
 
-.product-visual::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background-image: radial-gradient(rgba(22, 115, 71, 0.13) 1px, transparent 1px);
-    background-size: 18px 18px;
-    mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+.product-visual picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .product-visual img {
-    position: relative;
-    width: min(82%, 27rem);
-    filter: drop-shadow(0 1.75rem 1.5rem rgba(169, 35, 29, 0.23));
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 73% center;
 }
 
 .visual-badge {
@@ -489,17 +474,37 @@ p {
 }
 
 .product-image {
-    display: grid;
-    min-height: 30rem;
-    place-items: center;
-    padding: 2rem;
-    background: #fff4f3;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-white);
     border: 1px solid #f0d5d3;
     border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
-.product-image img {
-    width: min(90%, 27rem);
+.product-image > picture,
+.product-image > picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image > picture img {
+    object-fit: cover;
+}
+
+.product-filled-preview {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: clamp(7rem, 28%, 10rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--color-white);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(20, 43, 59, 0.22);
 }
 
 .product-content {
@@ -560,23 +565,25 @@ p {
 }
 
 .application-visual {
-    display: grid;
-    height: 12rem;
-    place-items: center;
-    background: linear-gradient(145deg, #eff7f2, #deeee4);
+    height: 14rem;
+    overflow: hidden;
+    background: var(--color-background);
 }
 
-.application-visual svg {
-    width: 7rem;
-    height: 7rem;
+.application-visual picture,
+.application-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.application-card:nth-child(2) .application-visual {
-    background: linear-gradient(145deg, #f8f4e9, #ede3cb);
+.application-visual img {
+    object-fit: cover;
+    transition: transform 300ms ease;
 }
 
-.application-card:nth-child(3) .application-visual {
-    background: linear-gradient(145deg, #eef6f9, #dcecf2);
+.application-card:hover .application-visual img {
+    transform: scale(1.025);
 }
 
 .card-copy {
@@ -816,6 +823,12 @@ p {
         display: none;
     }
 
+    .benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 56rem) {
     .hero-grid {
         grid-template-columns: 1fr;
     }
@@ -825,11 +838,11 @@ p {
     }
 
     .product-visual {
-        min-height: 28rem;
+        aspect-ratio: 16 / 10;
     }
 
-    .benefit-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .product-visual img {
+        object-position: 70% center;
     }
 }
 
@@ -859,9 +872,7 @@ p {
         min-height: 11rem;
     }
 
-    .about-panel,
-    .product-image,
-    .product-visual {
+    .about-panel {
         min-height: 23rem;
     }
 }
@@ -889,9 +900,18 @@ p {
         width: 100%;
     }
 
-    .product-visual,
-    .product-image {
-        min-height: 20rem;
+    .visual-badge {
+        display: none;
+    }
+
+    .product-visual {
+        aspect-ratio: 4 / 3;
+    }
+
+    .product-filled-preview {
+        right: 0.65rem;
+        bottom: 0.65rem;
+        border-width: 3px;
     }
 
     .application-card {
@@ -899,7 +919,7 @@ p {
     }
 
     .application-visual {
-        height: 10rem;
+        height: 12rem;
         min-height: 0;
     }
 
