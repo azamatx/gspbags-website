@@ -8,9 +8,15 @@
     "theme_color": "#167347",
     "icons": [
         {
-            "src": "/assets/icons/brand-mark.svg",
+            "src": "/assets/icons/favicon.svg",
             "sizes": "any",
             "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/assets/icons/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
             "purpose": "any"
         }
     ]
