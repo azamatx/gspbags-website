@@ -1,0 +1,17 @@
+{
+    "name": "GSP Bags",
+    "short_name": "GSP Bags",
+    "description": "Polypropylene mesh bags for agricultural packaging.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f3f8f5",
+    "theme_color": "#167347",
+    "icons": [
+        {
+            "src": "/assets/icons/brand-mark.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Red polypropylene mesh bag</title>
+  <desc id="desc">Stylized red woven mesh produce bag with a drawstring</desc>
+  <defs>
+    <pattern id="mesh" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0v24M12 0v24" stroke="#f36b63" stroke-width="4"/>
+    </pattern>
+    <clipPath id="bag">
+      <path d="M118 104c41 10 203 10 244 0l34 338c-72 43-240 43-312 0l34-338Z"/>
+    </clipPath>
+    <linearGradient id="fill" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#e9473f"/>
+      <stop offset="1" stop-color="#b91f1a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="240" cy="478" rx="142" ry="30" fill="#7c1d1d" opacity=".15"/>
+  <path d="M118 104c41 10 203 10 244 0l34 338c-72 43-240 43-312 0l34-338Z" fill="url(#fill)"/>
+  <g clip-path="url(#bag)" opacity=".75">
+    <rect x="64" y="70" width="352" height="430" fill="url(#mesh)"/>
+    <rect x="64" y="70" width="352" height="430" fill="url(#mesh)" transform="matrix(-1 0 0 1 480 0)"/>
+  </g>
+  <path d="M111 113c70 18 188 18 258 0" fill="none" stroke="#8f1b17" stroke-width="18" stroke-linecap="round"/>
+  <path d="M122 105c-24-20-34-48-24-72M358 105c24-20 34-48 24-72" fill="none" stroke="#d9342b" stroke-width="9" stroke-linecap="round"/>
+  <path d="M128 130c28 4 196 4 224 0" fill="none" stroke="#ff8a83" stroke-width="5" opacity=".75"/>
+  <path d="M117 144c34 15 212 15 246 0" fill="none" stroke="#791c18" stroke-width="3" opacity=".6"/>
+</svg>

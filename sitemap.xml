@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://gspbags.uz/</loc>
+        <xhtml:link rel="alternate" hreflang="uz" href="https://gspbags.uz/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://gspbags.uz/ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://gspbags.uz/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://gspbags.uz/"/>
+    </url>
+    <url>
+        <loc>https://gspbags.uz/ru/</loc>
+        <xhtml:link rel="alternate" hreflang="uz" href="https://gspbags.uz/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://gspbags.uz/ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://gspbags.uz/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://gspbags.uz/"/>
+    </url>
+    <url>
+        <loc>https://gspbags.uz/en/</loc>
+        <xhtml:link rel="alternate" hreflang="uz" href="https://gspbags.uz/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://gspbags.uz/ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://gspbags.uz/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://gspbags.uz/"/>
+    </url>
+</urlset>
